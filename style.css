@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(0, 28%, 92%);
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+:root{
+    --BACKGROUNDCOLOR: rgba(92, 92, 182, 0.959);
+    /* --BLACK:black; */
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.parent-container{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    border: 1px solid var(--BLACK);
+}
+header {
+    padding-top: 20px;
+    font-weight: 800;
+    font-size: 2em;
+    opacity: 0; 
+    animation: appear 2s ease-in forwards;
+    animation-delay: 2ms;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        
+    }
+    to {
+        opacity: 1;
+    }
+}
+.inputBar{
+    width: 600px;
+    height: 5vh;
+    border-radius: 5px;
+    color: var(--GRAY);
+    outline: none;
+    font-size: 1.2em;
+    padding-left: 5px;
+    color: var(--GRAY);
+}
+button{
+    width:80px;
+    height: 5vh;
+    border-radius: 10px;
+}
+.firstIcon{
+    position: absolute;
+    right:6px;
+    bottom: 1.5px;
+    color: var(--GRAY);
+}
+.firstChild{
+    position: relative;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.dropbtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90px;
+    border-radius: 10px;
+    background-color: rgba(92, 92, 182, 0.959);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.darkMode{
+    background-color: rgba(92, 92, 182, 0.959);
+    color: white;
+    width: 60px;
+    cursor: pointer;
+    border: none;
+}
+ /* Container for the dropdown content */
+ .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(92, 92, 182, 0.959);
+    min-width: 55px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  /* Show the dropdown content when hovering over the dropdown container */
+  .dropdown:hover .dropdown-content {
+    display: block;
+}
+.arrowDown:hover{
+    transform: rotate(180deg);
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: white;
+    color: var(--BACKGROUNDCOLOR);
+}
+.show{
+    display: block;
+}
+figure{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    font-weight: 800;
+    font-size: 1.2em;
+    /* position: relative; */
+    
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.add-container{
+    position: fixed;
+    bottom: 20px;
+    right: 250px;
+    z-index: 10; /* Ensure it's above other content */
+}
+#addbtn{
+   background-color: var(--BACKGROUNDCOLOR);
+   color: white;
+   width: 50px;
+   height: 6vh;
+   border-radius: 40px;
+   border: none;
+   cursor: pointer;
+}
+.inputBtn{
+    border: 1px solid var(--BLACK);
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+.displayContainer{
+    display: none;
+    position: fixed;
+    border: 1px solid var(--BLACK);
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.showDisplayContainer{
+    display: block;
+}
+.inputContainer{
+    border: 2px solid var(--BACKGROUNDCOLOR);
+    width: 500px;
+    display: flex;
+    padding: 25px 0 20px 0;
+    flex-direction: column;
+    align-items: center;
+    /* box-shadow: 5px 8px 5px var(--BACKGROUNDCOLOR); */
+    border-radius: 10px;
+    gap: 10em;
+    background-color: white;
+}
+#inputBar{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.inputContainer h1{
+    text-align: center;
+}
+#taskInput{
+    width: 450px;
+    border-radius: 10px;
+    height: 5vh;
+    outline: none;
+    font-size: 1.2em;
+    padding-left: 1em;
+    border: 2px solid var(--BACKGROUNDCOLOR);
+}
+.inputBtn button:first-child{
+    width: 100px;
+    color: var(--BACKGROUNDCOLOR);
+    font-weight: 800;
+    border: 0.5px solid var(--BACKGROUNDCOLOR);
+    cursor: pointer;
+}
+.inputBtn button:last-child{
+    width: 100px;
+    background-color: var(--BACKGROUNDCOLOR);
+    color: white;
+    font-weight: 800;
+    border: 0.5px solid var(--BACKGROUNDCOLOR);
+    cursor: pointer;
+}
+.blurBody .parent-container{
+    filter: blur(5px);
+}
+.task-container li {
+    display: flex;
+    align-items: center;
+}
+.task-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+.figDisplayImage{
+    display: none;
+}
+.figReplacement{
+    height: 50vh;
+    width: 70%;
+    padding:15px 0 0 20px;
+    display: none;
+    margin-top: 30px;
+}
+.taskDisplay{
+    display: block;
+}
+
+ 
+
+
+
+
