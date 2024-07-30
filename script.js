@@ -30,7 +30,9 @@ function darkMode() {
         body.style.backgroundColor = 'white';
         body.style.color = 'black';
     }
-}
+};
+
+
 
 // Select the display container for the input modal
 const displayContainer = document.querySelector('.displayContainer');
@@ -85,6 +87,7 @@ apply.addEventListener('click', function(){
         taskInput.value = ''; // Clear the input field after adding the task
     }
 
+    console.log(taskText)
     figure.style.display = 'none'; // Hide the figure (image container)
     figReplacement.classList.add('taskDisplay'); // Show the tasks container
     displayContainer.classList.remove('showDisplayContainer');
@@ -116,3 +119,71 @@ completeLink.addEventListener('click', function() {
     displayContainer.classList.remove('showDisplayContainer'); // Hide the display container
     document.body.classList.remove('blurBody'); // Remove the blur effect
 });
+
+// Add event listener to the search input bar
+document.querySelector('.inputBar').addEventListener('input', function() {
+    // Get the search query and convert it to lowercase
+    const searchQuery = this.value.toLowerCase();
+
+    // Select all tasks in both 'allTasks' and 'completedTasks' lists
+    const tasks = document.querySelectorAll('#allTasks li, #completedTasks li');
+
+    // Loop through each task to check if it matches the search query
+    tasks.forEach(task => {
+        // Get the text content of the task and convert it to lowercase
+        const taskText = task.textContent.toLowerCase();
+
+        // If the task text includes the search query, display the task
+        if (taskText.includes(searchQuery)) {
+            task.style.display = '';
+        } else {
+            // Otherwise, hide the task
+            task.style.display = 'none';
+        }
+    });
+});
+
+
+
+
+
+// // Save tasks to local storage
+// function saveTasks() {
+//     const allTasks = document.getElementById('allTasks').innerHTML;
+//     const completedTasks = document.getElementById('completedTasks').innerHTML;
+//     localStorage.setItem('allTasks', allTasks);
+//     localStorage.setItem('completedTasks', completedTasks);
+// }
+
+// // Load tasks from local storage
+// function loadTasks() {
+//     const allTasks = localStorage.getItem('allTasks');
+//     const completedTasks = localStorage.getItem('completedTasks');
+
+//     if (allTasks) {
+//         document.getElementById('allTasks').innerHTML = allTasks;
+//     }
+//     if (completedTasks) {
+//         document.getElementById('completedTasks').innerHTML = completedTasks;
+//     }
+
+//     // Reattach event listeners to checkboxes after loading from storage
+//     document.querySelectorAll('#allTasks li input[type="checkbox"], #completedTasks li input[type="checkbox"]').forEach(checkbox => {
+//         checkbox.addEventListener('change', function() {
+//             const listItem = this.parentElement;
+//             if (this.checked) {
+//                 document.getElementById('completedTasks').appendChild(listItem);
+//             } else {
+//                 document.getElementById('allTasks').appendChild(listItem);
+//             }
+//             saveTasks();
+//         });
+//     });
+// }
+
+// // Initial load of tasks
+// document.addEventListener('DOMContentLoaded', function() {
+//     loadTasks();
+// });
+
+

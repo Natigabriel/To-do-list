@@ -261,6 +261,178 @@ figure{
     display: block;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries for responsiveness */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .inputBar {
+        width: 400px;
+        font-size: 1em;
+    }
+    #taskInput {
+        width: 350px;
+    }
+    .inputContainer {
+        width: 90%;
+    }
+    .add-container {
+        right: 20px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .inputBar {
+        width: 250px;
+        font-size: 0.9em;
+    }
+    #taskInput {
+        width: 200px;
+    }
+    .inputContainer {
+        width: 90%;
+        padding: 20px 0 15px 0;
+    }
+    .add-container {
+        right: 10px;
+    }
+    .dropbtn, .darkMode {
+        width: 60px;
+        font-size: 0.8em;
+    }
+    .dropbtn {
+        justify-content: center;
+    }
+}
+
+
+/* Surface Duo (dual-screen) */
+@media (max-width: 540px) and (min-width: 720px) {
+    .inputBar {
+        width: 260px;
+        font-size: 1em;
+    }
+    #taskInput {
+        width: 240px;
+    }
+    .inputContainer {
+        width: 80%;
+        padding: 20px 0 15px 0;
+    }
+    .add-container {
+        right: 10px;
+    }
+    .dropbtn, .darkMode {
+        width: 60px;
+        font-size: 0.8em;
+    }
+}
+
+/* Surface Duo (single-screen) */
+@media (max-width: 540px) {
+    .inputBar {
+        width: 300px;
+        font-size: 1em;
+    }
+    #taskInput {
+        width: 280px;
+    }
+    .inputContainer {
+        width: 85%;
+        padding: 20px 0 15px 0;
+    }
+    .add-container {
+        right: 15px;
+    }
+    .dropbtn, .darkMode {
+        width: 65px;
+        font-size: 0.85em;
+    }
+    figure img{
+        width: 250px;
+    }
+}
+
+/* Media queries for screens smaller than 450px */
+@media only screen and (max-width: 450px) {
+    body {
+        gap: 1em;
+    }
+    
+    .parent-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .inputBar {
+        width: 90%;
+        height: 4vh;
+        font-size: 1em;
+    }
+    
+    button {
+        width: 70px;
+        height: 4vh;
+        font-size: 0.9em;
+    }
+    
+    header {
+        font-size: 1.5em;
+        padding-top: 10px;
+    }
+    
+    .firstChild {
+        width: 90%;
+    }
+    
+    .dropbtn {
+        width: 70px;
+    }
+    
+    .add-container {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .displayContainer {
+        width: 90%;
+    }
+    
+    .inputContainer {
+        width: 90%;
+    }
+    
+    #taskInput {
+        width: 80%;
+    }
+    
+    .figReplacement {
+        width: 90%;
+    }
+    figure img{
+        width: 250px;
+    }
+    .firstIcon{
+        left: 170px;
+        bottom: 3px;
+    }
+}
+
+
  
 
 
